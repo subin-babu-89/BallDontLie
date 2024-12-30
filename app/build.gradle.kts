@@ -3,6 +3,9 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.secrets.gradle.plugin)
+    alias(libs.plugins.ksp.plugin)
+    alias(libs.plugins.hilt.android.plugin)
+    alias(libs.plugins.kotlin.serialization)
 }
 
 android {
@@ -12,7 +15,7 @@ android {
     defaultConfig {
         applicationId = "com.example.myapplication"
         minSdk = 29
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -51,6 +54,13 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation(libs.hilt.android)
+    implementation(libs.retrofit)
+    implementation(libs.androidx.hilt.navigation.compose)
+    implementation(libs.converter.kotlinx.serialization)
+    implementation(libs.okhttp)
+    ksp(libs.hilt.android.compiler)
+    implementation(libs.kotlin.serialization)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
