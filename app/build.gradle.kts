@@ -9,11 +9,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.myapplication"
+    namespace = "com.example.balldontlie"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.myapplication"
+        applicationId = "com.example.balldontlie"
         minSdk = 29
         targetSdk = 35
         versionCode = 1
@@ -61,6 +61,8 @@ dependencies {
     implementation(libs.okhttp)
     ksp(libs.hilt.android.compiler)
     implementation(libs.kotlin.serialization)
+    implementation(libs.coil.compose)
+    implementation(libs.coil.okhttp)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
